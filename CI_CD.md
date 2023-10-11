@@ -40,8 +40,10 @@ Why Jenkins:
 2. Test
 3. Deploy
 
-### Altenratives to Jenkins
+### Alternatives to Jenkins
 - circleci
 - TeamCity
 - Bamboo
 - GitLab
+
+![](Screenshot 2023-10-11 115204.png)
