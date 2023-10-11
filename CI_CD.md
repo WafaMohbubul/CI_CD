@@ -19,3 +19,23 @@
   - make sure that you can release new changes to your customers quickly in a sustainable way
   - also have automated your release process as well as automated testing
   - In continuous Delivery the deployment is completed manually
+- Continuous Deployment:
+  - every change that passes all stages of your production pipeline is released to your customers
+  - no human intervention, and only a failed test will prevent a new change to be deployed to production
+
+### Jenkins
+What is it:
+- Tool for CI-CI Pipeline
+- Jenkins is an open-source automation server in which the central build and CI process take place
+-  a Java-based program with packages for Windows, macOS, & Linux.
+Why Jenkins:
+- Open source
+- flexible
+- active community
+- lots of plugins
+
+### Altenratives to Jenkins
+- circleci
+- TeamCity
+- Bamboo
+- GitLab
