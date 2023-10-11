@@ -33,6 +33,12 @@ Why Jenkins:
 - flexible
 - active community
 - lots of plugins
+- Easy to use
+
+### Stages of Jenkins
+1. Build 
+2. Test
+3. Deploy
 
 ### Altenratives to Jenkins
 - circleci
