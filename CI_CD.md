@@ -48,11 +48,4 @@ Why Jenkins:
 
 ![](Screenshot 2023-10-11 115204.png)
 
-test
-test2
-test3
-test4
-
-test5
-test6
-test7
+test1
