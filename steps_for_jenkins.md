@@ -96,10 +96,8 @@ sudo apt upgrade -y
 4. Install Node.js (or Use an AMI)
 5. build step needs to be execute `npm start` within  app directory on the EC2 instance
 NOTE: either install Node.js on the EC2 instance or use an Amazon Machine Image (AMI) that already has Node.js pre-installed.
-7. Verify the Code via SSH 
-8. Set up an SSH connection from Jenkins to your EC2 instance. 
-9. Use an appropriate build step or script to SSH into your EC2 instance 
-10. verify that the code and dependencies are correctly set up.
+7. Verify the Code via SSH
+10. Verify that the code and dependencies are correctly set up.
 11. Modify app name
 11. Add a build step to update the name of the Sparta app to `Wafa - Sparta` within the app code.
 
