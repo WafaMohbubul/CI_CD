@@ -70,7 +70,7 @@ CI (Continuous Integration)
 12. Build Environment > Tick **SSH Agent** > **tech254.pem**
 13. Post-build Actions > Git Publisher > Tick `Merge Results`
 
-**PLAN for Continuous Deployment and Delivery**
+## PLAN for Continuous Deployment and Delivery**
 Difference between deployment and delivery is that big red button in delivery to push it out. 
 
 #### Allow Jenkins to SSH instance EC2 Instance
