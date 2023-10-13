@@ -95,7 +95,7 @@ sudo apt upgrade -y
 3. Run npm install 
 4. Install Node.js (or Use an AMI)
 5. build step needs to be execute `npm start` within  app directory on the EC2 instance
-6. either install Node.js on the EC2 instance or use an Amazon Machine Image (AMI) that already has Node.js pre-installed.
+NOTE: either install Node.js on the EC2 instance or use an Amazon Machine Image (AMI) that already has Node.js pre-installed.
 7. Verify the Code via SSH 
 8. Set up an SSH connection from Jenkins to your EC2 instance. 
 9. Use an appropriate build step or script to SSH into your EC2 instance 
