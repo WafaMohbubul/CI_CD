@@ -1,3 +1,32 @@
+## Navigating Jenkins
+
+#### Creating new job
+1. Click **New Item**
+2. Enter a suitable name: `wafa-first-job`
+3. Scroll down and click **OK**
+4. Write a description (can be anything suitable)
+5. Select **Discard old builds**
+6. Scroll down to **Build** and write commands:
+```commandline
+whoami
+uname -a
+```
+or
+```commandline
+date
+```
+7. click **Save**
+
+#### Linking 2 jobs together
+1. click on the job
+2. On left hand navigation plane, click **Configure**
+3. Scroll down to **Post-build Actions**
+4. Select **Build Other Project**
+4. Find the job you want to connect to 
+5. Select **Trigger only if build is stable**
+6. click **Save**
+
+
 ## Merging dev branch to main branch
 
 #### Creating Jobs in Jenkins
@@ -63,12 +92,7 @@ sudo systemctm enable mongod
 sudo apt upgrade -y
 ```
 
-#### Copy the App Code
-1. Use a build step in your "your_name-cd" job to copy the application code to the EC2 instance. 
-2. Change to the App Directory 
-3. Add a build step to navigate to the directory where the app code was copied on the EC2 instance 
-3. Use the `cd` command.
-Run npm install 
+3. Run npm install 
 4. Install Node.js (or Use an AMI)
 5. build step needs to be execute `npm start` within  app directory on the EC2 instance
 6. either install Node.js on the EC2 instance or use an Amazon Machine Image (AMI) that already has Node.js pre-installed.
@@ -77,6 +101,6 @@ Run npm install
 9. Use an appropriate build step or script to SSH into your EC2 instance 
 10. verify that the code and dependencies are correctly set up.
 11. Modify app name
-11. Add a build step to update the name of the Sparta app to "your_name - Sparta" within the app code.
+11. Add a build step to update the name of the Sparta app to `Wafa - Sparta` within the app code.
 
 
