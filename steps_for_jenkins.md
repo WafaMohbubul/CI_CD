@@ -24,6 +24,7 @@ npm test
 14. Post-build Actions > **Build other projects** > select `wafa-merge` > Trigger only if build is stable 
 NOTE: A SECOND job needs to be created before connecting the 2
 
+CI (Continuous Integration)
 #### Creating a second job and Merging
 1. Create second job
 2. label 'Wafa-merge'
@@ -40,28 +41,36 @@ NOTE: A SECOND job needs to be created before connecting the 2
 12. Build Environment > Tick **SSH Agent** > **tech254.pem**
 13. Post-build Actions > Git Publisher > Tick `Merge Results`
 
-PLAN
-#### Allow Jenkins to SSH instance EC2 Instance
-1. Create EC2 instance 
-1. Set up SSH access for Jenkins to your EC2 instance.
-2. Ensure that Jenkins has the necessary SSH key or credentials to access the instance.
+**PLAN for Continuous Deployment and Delivery**
+Difference between deployment and delivery is that big red button in delivery to push it out. 
 
-#### Add the -y Command for SSH Access
-1. Modify the SSH command to include the `-y` option to automatically confirm host authenticity without user interaction.
-2. 
+#### Allow Jenkins to SSH instance EC2 Instance
+1. Create EC2 instance with Ubuntu 18.04 
+2. Set up SSH access to your EC2 instance using `sudo apt upgrade -y`
+NOTE: Ensure that Jenkins has the necessary SSH key or credentials to access the instance.
+3. Install mongoDB
+4. Change the BindIP to 0.0.0.0 inside file
+5. Run commands:
 ```commandline
-sudo apt upgrade
+sudo systemctl start mongod
+sudo systemctm enable mongod
+```
+
+#### Create the App virtual machine
+1. Modify the SSH command to include the `-y` option to automatically confirm host authenticity without user interaction.
+2. Run commands:
+```commandline
 sudo apt upgrade -y
 ```
-#### Copy the App Code
-1. Use a build step in your "your_name-cd" job to copy the application code to the EC2 instance.
 
-1. Change to the App Directory
-2. Add a build step to navigate to the directory where the app code was copied on the EC2 instance 
+#### Copy the App Code
+1. Use a build step in your "your_name-cd" job to copy the application code to the EC2 instance. 
+2. Change to the App Directory 
+3. Add a build step to navigate to the directory where the app code was copied on the EC2 instance 
 3. Use the `cd` command.
 Run npm install 
-4. build step needs to be execute `npm install` within  app directory on the EC2 instance 
-5. Install Node.js (or Use an AMI)
+4. Install Node.js (or Use an AMI)
+5. build step needs to be execute `npm start` within  app directory on the EC2 instance
 6. either install Node.js on the EC2 instance or use an Amazon Machine Image (AMI) that already has Node.js pre-installed.
 7. Verify the Code via SSH 
 8. Set up an SSH connection from Jenkins to your EC2 instance. 
