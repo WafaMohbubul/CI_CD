@@ -145,3 +145,4 @@ NOTE: either install Node.js on the EC2 instance or use an Amazon Machine Image 
 11. Modify app name: add a build step to update the name of the Sparta app to `Wafa - Sparta` within the app code.
 
 
+test1
