@@ -146,4 +146,3 @@ NOTE: either install Node.js on the EC2 instance or use an Amazon Machine Image 
 
 
 test1
-test2
